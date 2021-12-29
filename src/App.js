@@ -32,7 +32,7 @@ function App() {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     const city = cityRef.current.value;
     if (city === "") return;
     const weather = await getWeatherFromCity(city);
