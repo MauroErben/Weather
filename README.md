@@ -1,3 +1,4 @@
-!["Desktop"](https://i.imgur.com/KIzALZu.png)
+### Weather app by Mauro Erben.
 
-!["Phone"](https://i.imgur.com/hEFOwSJ.png)
+!["Phone"](https://i.imgur.com/mCdCirt.png)
+!["Desktop"](https://i.imgur.com/iAnLy7p.png)
