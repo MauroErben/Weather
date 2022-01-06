@@ -1,16 +1,17 @@
 import React from "react";
 import { Header, HeaderSearch } from "./HeaderStyles";
 import { faCompass, faSearchLocation } from "@fortawesome/free-solid-svg-icons";
-import { ButtonHeader } from "./ButtonHeader";
+import { Button } from "./HeaderStyles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const WeatherHeader = ({ referencia, onUpdate, onInputChange, onSearch }) => {
   return (
     <Header>
       <HeaderSearch>
         <input ref={referencia} onChange={onInputChange} type="text" placeholder="Ingresa una ciudad/país" />
-        <ButtonHeader clickEvent={onSearch} icon={faSearchLocation} />
+        <Button onClick={onSearch}><FontAwesomeIcon icon={faSearchLocation}/></Button>
       </HeaderSearch>
-      <ButtonHeader clickEvent={onUpdate} icon={faCompass} />
+      <Button onClick={onUpdate}><FontAwesomeIcon icon={faCompass}/></Button>
     </Header>
   )
 }

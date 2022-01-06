@@ -8,7 +8,6 @@ export const Main = styled.main`
     flex-grow: 1;
     padding: 10px;
     border-bottom: 1px solid #999;
-
 `
 
 export const ImgContainer = styled.div`
@@ -30,17 +29,16 @@ export const InformacionClimatica = styled.div`
     justify-content: space-around;
 `
 
-export const GradosStyled = styled.h2`
+export const Grados = styled.h2`
     color: #fff;
     font-size: 32px;
 `
 
-export const CityStyled = styled.h1`
+export const City = styled.h1`
     color: #fff;
-
 `
 
-export const InformacionStyled = styled.p`
+export const Informacion = styled.p`
     color: #fff;
 
     // Menor a 350px de ancho

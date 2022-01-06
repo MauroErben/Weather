@@ -1,9 +1,9 @@
 import React from 'react';
 import { Footer } from './FooterStyles';
-import { FooterInformacion } from './FooterInformacion';
+import { FooterInformacion } from './FooterStyles';
 
 const WeatherFooter = ({ fecha }) => {
-    const dia = fecha.getDate();
+    const dia = fecha.getDate().toString().padStart(2, '0');
     const mes = fecha.getMonth() + 1;
     const año = fecha.getFullYear();
     const hora = fecha.getHours();
@@ -11,8 +11,8 @@ const WeatherFooter = ({ fecha }) => {
 
     return (
         <Footer>
-            <FooterInformacion texto={`Última actualización: ${dia}/${mes}/${año} | ${hora}:${minutos}`} />
-            <FooterInformacion texto={`(C) 2022 Mauro Erben.`} />
+            <FooterInformacion>{dia}/{mes}/{año} | {hora}:{minutos}</FooterInformacion>
+            <FooterInformacion>(C) 2022 Mauro Erben.</FooterInformacion>
         </Footer>
     )
 }

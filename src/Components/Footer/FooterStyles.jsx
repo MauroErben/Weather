@@ -8,7 +8,7 @@ export const Footer = styled.footer`
     padding: 10px;
 `;
 
-export const FooterInformacionStyled = styled.p`
+export const FooterInformacion = styled.p`
     color: #fff;
     font-size: 15px;
     

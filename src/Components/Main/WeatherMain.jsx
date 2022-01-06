@@ -1,8 +1,6 @@
 import React from "react";
 import { InformacionClimatica, Main, ImgContainer } from "./MainStyles";
-import { Informacion } from "./Informacion";
-import { Grados } from "./Grados";
-import { City } from "./City";
+import { City, Informacion, Grados } from "./MainStyles";
 
 const WeatherMain = ({ obj_clima }) => {
 
@@ -16,17 +14,17 @@ const WeatherMain = ({ obj_clima }) => {
             <>
                 {weather.map((clima) => (
                     <Main key={id}>
-                        <City texto={`${name}, ${country}`} />
-                        <Informacion texto={`${clima.description.charAt(0).toUpperCase() + clima.description.slice(1)}`} />
+                        <City>{name}, {country}</City>
+                        <Informacion>{clima.description.charAt(0).toUpperCase() + clima.description.slice(1)}</Informacion>
                         <ImgContainer>
                             <img src={`http://openweathermap.org/img/w/${clima.icon}.png`} />
                         </ImgContainer>
                         <InformacionClimatica>
-                            <Informacion texto={`Humedad ${humidity}%`} />
-                            <Grados texto={`${Math.round(temp)}°C`} />
-                            <Informacion texto={`Viento: ${Math.round(speed)} km/h`} />
+                            <Informacion>Humedad: {humidity}%</Informacion>
+                            <Grados>{Math.round(temp)}°C</Grados>
+                            <Informacion>Viento: {Math.round(speed)} km/h</Informacion>
                         </InformacionClimatica>
-                        <Informacion texto={`Sensación térmica: ${Math.round(feels_like)}°C`} />
+                        <Informacion>Sensación térmica: {Math.round(feels_like)}°C</Informacion>
                     </Main>
                 ))}
             </>
@@ -34,11 +32,9 @@ const WeatherMain = ({ obj_clima }) => {
     } else {
         return (
             <Main>
-                <Informacion texto={`Cargando...`} />
+                <Informacion>Cargando...</Informacion>
             </Main>
         )
     }
 }
 export default WeatherMain;
-
-
