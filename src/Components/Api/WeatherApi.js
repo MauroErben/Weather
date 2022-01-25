@@ -1,4 +1,4 @@
-const API_KEY = "e1c8924c1d9d2ef40e2d7bb03803bc27";
+const API_KEY = process.env.REACT_APP_APIKEY;
 
 export const getWeatherFromCoords = (lat, lon) => {
     return fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}&lang=es`)
